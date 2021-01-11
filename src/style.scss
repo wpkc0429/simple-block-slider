@@ -1,0 +1,37 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-gutenslider {
+	color: #fff;
+	padding: 2px;
+}
+.blocks-slider-gallery-item{
+
+	img{
+		margin: 0 auto;
+		max-height:600px !important;
+	}
+}
+.blocks-slider-gallery-grid-frontend{
+	margin: 0 25px;
+
+	.slick-prev:before, .slick-next:before {
+	  color: black;
+	}
+	.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    background: transparent;
+    color: black;
+	}
+	.slick-prev, .slick-next {
+		font-size: 0;
+    line-height: 0;
+		background: transparent;
+	}
+	.slick-next {
+		right: -25px;
+	}
+}

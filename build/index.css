@@ -1,0 +1,29 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.blocks-slider-gallery-grid {
+  display: none;
+}
+
+.blocks-slider-gallery-display {
+  width: 576px !important;
+  margin: 0 auto;
+}
+
+.blocks-slider-gallery-item img {
+  margin: 0 auto;
+  max-height: 600px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: black;
+}
+
+.slick-dots {
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}
+
+/*# sourceMappingURL=index.css.map*/
