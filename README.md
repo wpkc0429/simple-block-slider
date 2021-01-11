@@ -1,2 +1,1 @@
-"# simple-block-slider" 
-"# simple-block-slider" 
+簡單的Block Editor輪播外掛
