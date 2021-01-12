@@ -247,10 +247,11 @@ function Edit(_ref) {
       tabIndex: "0",
       "aria-label": ariaLabel,
       onLoad: function onLoad() {
-        jQuery('.blocks-slider-gallery-display').remove();
-        jQuery('.blocks-slider-gallery-grid').after('<div class="blocks-slider-gallery-display"></div>');
-        jQuery('.blocks-slider-gallery-display').html(jQuery('.blocks-slider-gallery-grid').html());
-        jQuery('.blocks-slider-gallery-display').slick({
+        var id = blockProps.id;
+        jQuery('#' + id + ' > div > div.blocks-slider-gallery-display').remove();
+        jQuery('#' + id + ' > div > div.blocks-slider-gallery-grid').after('<div class="blocks-slider-gallery-display"></div>');
+        jQuery('#' + id + ' > div > div.blocks-slider-gallery-display').html(jQuery('#' + id + ' > div > div.blocks-slider-gallery-grid').html());
+        jQuery('#' + id + ' > div > div.blocks-slider-gallery-display').slick({
           dots: true,
           infinite: true,
           speed: 300,
@@ -276,16 +277,6 @@ function Edit(_ref) {
             caption: Object(lodash__WEBPACK_IMPORTED_MODULE_4__["toString"])(newImage.caption)
           };
         })
-      });
-      jQuery('.blocks-slider-gallery-display').remove();
-      jQuery('.blocks-slider-gallery-grid').after('<div class="blocks-slider-gallery-display"></div>');
-      jQuery('.blocks-slider-gallery-display').html(jQuery('.blocks-slider-gallery-grid').html());
-      jQuery('.blocks-slider-gallery-display').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
       });
     },
     allowedTypes: ['image'],

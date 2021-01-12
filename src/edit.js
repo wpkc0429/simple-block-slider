@@ -44,7 +44,6 @@ import {
  */
 export default function Edit( { attributes, setAttributes, isSelected } ) {
   const blockProps = useBlockProps();
-
   // Simplify access to attributes
   const { images } = attributes;
 
@@ -74,10 +73,11 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
                   aria-label={ ariaLabel }
                   onLoad={
                     () => {
-          						jQuery('.blocks-slider-gallery-display').remove();
-          						jQuery('.blocks-slider-gallery-grid').after('<div class="blocks-slider-gallery-display"></div>');
-                      jQuery('.blocks-slider-gallery-display').html(jQuery('.blocks-slider-gallery-grid').html());
-                      jQuery('.blocks-slider-gallery-display').slick({
+                      var id = blockProps.id;
+                      jQuery('#'+id+' > div > div.blocks-slider-gallery-display').remove();
+                      jQuery('#'+id+' > div > div.blocks-slider-gallery-grid').after('<div class="blocks-slider-gallery-display"></div>');
+                      jQuery('#'+id+' > div > div.blocks-slider-gallery-display').html(jQuery('#'+id+' > div > div.blocks-slider-gallery-grid').html());
+                      jQuery('#'+id+' > div > div.blocks-slider-gallery-display').slick({
                         dots: true,
                         infinite: true,
                         speed: 300,
@@ -111,16 +111,6 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
                 caption: toString( newImage.caption ),
         			} )),
             } );
-						jQuery('.blocks-slider-gallery-display').remove();
-						jQuery('.blocks-slider-gallery-grid').after('<div class="blocks-slider-gallery-display"></div>');
-            jQuery('.blocks-slider-gallery-display').html(jQuery('.blocks-slider-gallery-grid').html());
-            jQuery('.blocks-slider-gallery-display').slick({
-              dots: true,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 1,
-              adaptiveHeight: true
-            });
           }
         }
         allowedTypes = { [ 'image' ] }
